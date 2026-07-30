@@ -1,7 +1,7 @@
 {
-  "version": 5,
+  "version": 6,
   "updated": "2026-07-30",
-  "note": "Ingredient rules for the Food Check Android app. AVOID requires demonstrated human harm at realistic eating amounts, NOT merely 'banned somewhere'. Every entry must state its harm dose in howMuch.",
+  "note": "Ingredient rules for the Food Check Android app. AVOID requires demonstrated human harm at realistic amounts, NOT merely 'banned somewhere'. Every entry must state its harm dose in howMuch. The cosmetic and pet arrays are separate top-level keys on purpose: older app versions read 'avoid' wholesale and match it against food ingredient text, so a beauty entry placed there would flag real groceries.",
   "avoid": [
     {
       "id": "pho",
@@ -15,7 +15,9 @@
     {
       "id": "e924",
       "name": "Potassium bromate",
-      "tags": ["en:e924"],
+      "tags": [
+        "en:e924"
+      ],
       "pattern": "potassium\\s+bromate",
       "why": "A bread-flour additive that causes cancer in animals by damaging DNA. Health experts refused to set any safe level for it.",
       "howMuch": "No safe level exists. Properly baked bread burns off most of it, but under-baked bread can keep some, and there's no reason to accept any.",
@@ -24,7 +26,9 @@
     {
       "id": "e443",
       "name": "Brominated vegetable oil (BVO)",
-      "tags": ["en:e443"],
+      "tags": [
+        "en:e443"
+      ],
       "pattern": "brominated\\s+vegetable\\s+oil|\\bBVO\\b",
       "why": "Builds up in your fat and can harm the thyroid and nerves. It has been illegal in US food since August 2025, if you find it, the product is out of date.",
       "howMuch": "People who drank 2-4 litres of BVO citrus soda a day for weeks developed headaches, memory loss and trouble walking. It's now illegal at any level.",
@@ -35,7 +39,12 @@
     {
       "id": "nitrites",
       "name": "Nitrites / nitrates (curing salts)",
-      "tags": ["en:e249", "en:e250", "en:e251", "en:e252"],
+      "tags": [
+        "en:e249",
+        "en:e250",
+        "en:e251",
+        "en:e252"
+      ],
       "pattern": "(sodium|potassium)\\s+(nitrite|nitrate)",
       "why": "In cured meat these turn into compounds tied to bowel cancer. Processed meat is the one food the World Health Organization calls a definite cause of cancer in people.",
       "howMuch": "Every 50 g of processed meat a day (two slices of bacon or one hot dog) raises bowel-cancer risk by about 18%. Occasional is fine; daily is the problem."
@@ -43,7 +52,9 @@
     {
       "id": "e127",
       "name": "Red dye No. 3 (erythrosine)",
-      "tags": ["en:e127"],
+      "tags": [
+        "en:e127"
+      ],
       "pattern": "erythrosine|\\bred\\s*(no\\.?\\s*|#\\s*)?3\\b",
       "why": "Being removed from US food by January 2027. It caused thyroid tumours in male rats through a hormone route that doesn't work the same way in people, the FDA itself says there's no evidence it causes cancer in humans.",
       "howMuch": "The rat tumours needed the dye to be about 4% of everything the animal ate, for life, roughly 100,000 times more than anyone gets from food."
@@ -51,7 +62,9 @@
     {
       "id": "e171",
       "name": "Titanium dioxide",
-      "tags": ["en:e171"],
+      "tags": [
+        "en:e171"
+      ],
       "pattern": "titanium\\s+dioxide",
       "why": "A white colouring. Europe removed it in 2022 because it couldn't rule out DNA damage, but the USA, Canada, the UK, Australia and the World Health Organization all reviewed it and found no health concern.",
       "howMuch": "No harmful amount has ever been found. Less than one part in a thousand is absorbed by the body; it mostly passes straight through.",
@@ -60,7 +73,10 @@
     {
       "id": "e216",
       "name": "Propylparaben",
-      "tags": ["en:e216", "en:e217"],
+      "tags": [
+        "en:e216",
+        "en:e217"
+      ],
       "pattern": "propyl\\s*paraben|propyl\\s+p-?hydroxybenzoate",
       "why": "A preservative Europe removed from food over possible hormone effects in young rats. A later, larger study found nothing, and most of what people absorb comes from cosmetics rather than food.",
       "howMuch": "The rat effect needed about 700 mg a day scaled to an adult. Food gives you well under 1 mg a day, about a thousand times less.",
@@ -69,7 +85,10 @@
     {
       "id": "e320",
       "name": "BHA / BHT",
-      "tags": ["en:e320", "en:e321"],
+      "tags": [
+        "en:e320",
+        "en:e321"
+      ],
       "pattern": "\\bBHA\\b|\\bBHT\\b|butylated\\s+hydroxy",
       "why": "Preservatives that stop fats going rancid. BHA caused tumours in the forestomach of rats, an organ people don't have. The FDA reopened the safety review of both in 2026.",
       "howMuch": "The rat tumours needed BHA to be 2% of everything the animal ate, about a thousand times what people get. The one real gap: children who eat a lot of packaged food can go over the BHT limit."
@@ -77,7 +96,13 @@
     {
       "id": "dyes",
       "name": "Artificial food dyes (Red 40, Yellow 5, Yellow 6)",
-      "tags": ["en:e129", "en:e102", "en:e110", "en:e122", "en:e124"],
+      "tags": [
+        "en:e129",
+        "en:e102",
+        "en:e110",
+        "en:e122",
+        "en:e124"
+      ],
       "pattern": "allura\\s+red|tartrazine|sunset\\s+yellow|\\bred\\s*(no\\.?\\s*|#\\s*)?40\\b|\\byellow\\s*(no\\.?\\s*|#\\s*)?[56]\\b",
       "why": "Can worsen attention and hyperactivity in some children. In Europe these foods must carry a warning label. US makers have promised to remove them, but there's no law forcing it.",
       "howMuch": "Behaviour changes showed up in children at 20-60 mg a day, one brightly coloured drink or a handful of sweets. No effect has been found in adults."
@@ -85,7 +110,9 @@
     {
       "id": "e968",
       "name": "Erythritol",
-      "tags": ["en:e968"],
+      "tags": [
+        "en:e968"
+      ],
       "pattern": "erythritol",
       "why": "A sugar substitute in \"keto\" and sugar-free foods. Recent research found it makes blood platelets stickier, which could raise clot, stroke and heart-attack risk. Not proven yet, but worth knowing if your heart is a concern.",
       "howMuch": "One serving (about 30 g, the amount in a single sugar-free drink or dessert) was enough to change platelet behaviour for hours in healthy volunteers."
@@ -93,7 +120,9 @@
     {
       "id": "e951",
       "name": "Aspartame",
-      "tags": ["en:e951"],
+      "tags": [
+        "en:e951"
+      ],
       "pattern": "aspartame",
       "why": "The diet-drink sweetener. The World Health Organization's cancer agency calls it \"possibly\" cancer-causing, but the same organisation's safety panel kept the daily limit unchanged and found no reason to worry.",
       "howMuch": "You'd have to drink about 14 cans of diet soda every day to reach the safe limit. The one real rule: anyone born with the condition PKU must avoid it completely."
@@ -101,10 +130,131 @@
     {
       "id": "e952",
       "name": "Cyclamate",
-      "tags": ["en:e952"],
+      "tags": [
+        "en:e952"
+      ],
       "pattern": "cyclamate|cyclamic\\s+acid",
       "why": "A sweetener banned in the USA in 1970 over a cancer scare that later fell apart, the FDA's own scientists cleared it in 1984. It stays on this list only because its safe daily limit is lower than other sweeteners.",
       "howMuch": "About 5 cans a day of a cyclamate-sweetened drink reaches the safe limit, the tightest margin of any sweetener, so don't drink it all day."
+    }
+  ],
+  "cosmeticAvoid": [
+    {
+      "id": "cos-mercury",
+      "name": "Mercury (calomel, mercurous chloride, thimerosal)",
+      "tags": [],
+      "pattern": "\\bmercur(y|ous|ic)\\b|\\bcalomel\\b|thimerosal|thiomersal|mercurio",
+      "why": "Used illegally in some skin-lightening creams. It really does poison people: kidney damage, tremors, memory loss and rashes, and it passes to a baby through the skin and through breast milk.",
+      "howMuch": "Daily use of a contaminated cream for a few months has caused real poisoning. The legal limit is 1 part per million and seized creams have tested over 10,000 times that.",
+      "bannedIn": "Banned in cosmetics in the USA, EU and most countries"
+    },
+    {
+      "id": "cos-hydroquinone",
+      "name": "Hydroquinone",
+      "tags": [],
+      "pattern": "hydroquinone",
+      "why": "A skin lightener that can cause ochronosis, a permanent blue-black darkening of exactly the skin you were trying to lighten. The FDA withdrew it from over-the-counter sale in 2020.",
+      "howMuch": "Ochronosis follows months to years of daily use, more often above 2% and on darker skin. A short prescribed course under a doctor is a different matter.",
+      "bannedIn": "Banned over the counter in the USA (2020) and in cosmetics in the EU"
+    },
+    {
+      "id": "cos-lead-acetate",
+      "name": "Lead acetate",
+      "tags": [],
+      "pattern": "lead\\s+acetate|plumbum\\s+aceticum",
+      "why": "Was used in progressive hair dyes for men. Lead comes off on hands, combs and pillowcases, which is how it reaches a child in the same house.",
+      "howMuch": "Lead has no safe level, particularly for children. Users left measurable lead on everything they touched, which is why the FDA revoked its approval in 2018.",
+      "bannedIn": "USA (2018), EU, Canada"
+    },
+    {
+      "id": "cos-formaldehyde",
+      "name": "Formaldehyde / formalin",
+      "tags": [],
+      "pattern": "\\bformaldehyde\\b|\\bformalin\\b|methylene\\s+glycol|methanediol",
+      "why": "A known human carcinogen when breathed in. Salon hair-smoothing treatments have caused documented breathing problems, burning eyes and nosebleeds in both stylists and clients.",
+      "howMuch": "Some salon smoothing treatments exceeded workplace air limits within a single service. This entry is the free chemical itself, not the releaser preservatives, which are a much smaller and separate concern.",
+      "bannedIn": "Banned in cosmetics in the EU; restricted in the USA"
+    }
+  ],
+  "cosmeticWarning": [
+    {
+      "id": "cos-isothiazolinone",
+      "name": "Methylisothiazolinone (MI / MCI)",
+      "tags": [],
+      "pattern": "methylisothiazolinone|methylchloroisothiazolinone|\\bMCI\\b|benzisothiazolinone",
+      "why": "A preservative that caused a genuine epidemic of contact allergy across Europe between 2010 and 2015, at one point affecting around one person in ten who was patch-tested. Once you are sensitised it is for life.",
+      "howMuch": "The trouble was almost entirely in leave-on products like wipes and creams. Europe banned it from those in 2017 and capped it at 15 parts per million in things you rinse off, where it causes far less trouble.",
+      "bannedIn": "Banned in leave-on cosmetics in the EU (2017)"
+    },
+    {
+      "id": "cos-formaldehyde-releasers",
+      "name": "Formaldehyde releasers (DMDM hydantoin, quaternium-15 and similar)",
+      "tags": [],
+      "pattern": "dmdm\\s+hydantoin|imidazolidinyl\\s+urea|diazolidinyl\\s+urea|quaternium-15|bronopol|bromopol|sodium\\s+hydroxymethylglycinate|2-bromo-2-nitropropane",
+      "why": "Preservatives that work by slowly giving off tiny amounts of formaldehyde. The realistic problem is contact allergy: these are among the more common causes of cosmetic rashes.",
+      "howMuch": "The amounts released are a small fraction of what the salon treatments produce, and most people never react. If you have an unexplained rash from a product, these are worth suspecting."
+    },
+    {
+      "id": "cos-oxybenzone",
+      "name": "Oxybenzone (benzophenone-3)",
+      "tags": [],
+      "pattern": "oxybenzone|benzophenone-3",
+      "why": "A chemical sunscreen filter absorbed through the skin far above the level at which the FDA asks for more safety testing. That is a call for data, not a finding of harm, and no harm has been shown in people.",
+      "howMuch": "No harmful dose has been established. Please read this the right way round: skin cancer is a proven, common, serious disease, and sunscreen prevents vastly more harm than this risks. If it bothers you, mineral sunscreens using zinc oxide or titanium dioxide contain none of it."
+    },
+    {
+      "id": "cos-ppd",
+      "name": "p-Phenylenediamine and coal-tar hair dyes",
+      "tags": [],
+      "pattern": "p-?phenylenediamine|\\bPPD\\b|toluene-2,5-diamine|coal\\s+tar",
+      "why": "The main dark hair-dye ingredient and a strong allergen. Reactions range from an itchy scalp to severe facial swelling needing hospital treatment.",
+      "howMuch": "Perhaps 1% of people are sensitised, and reactions get worse each time. The patch test on the box is not marketing, it is the actual precaution. Black henna temporary tattoos contain far more of it and are a common way people become allergic in the first place."
+    },
+    {
+      "id": "cos-phthalates",
+      "name": "Phthalates (DEP, DBP, DEHP)",
+      "tags": [],
+      "pattern": "\\bphthalate|diethyl\\s+phthalate|dibutyl\\s+phthalate|\\bDEHP\\b|\\bDBP\\b",
+      "why": "Used to make fragrance last and nail polish flexible. Some of them affect hormones in animal studies at high doses, and there is ongoing concern about exposure during pregnancy.",
+      "howMuch": "No harm has been demonstrated at cosmetic exposures, and most of what people actually absorb comes from food packaging rather than from cosmetics. The EU has banned the two of most concern from cosmetics entirely.",
+      "bannedIn": "DBP and DEHP banned in EU cosmetics"
+    },
+    {
+      "id": "cos-pfas",
+      "name": "PFAS (fluorinated ingredients)",
+      "tags": [],
+      "pattern": "perfluor|polyfluor|\\bPTFE\\b|polytetrafluoroethylene|fluoro-?octyl|\\bC9-15\\s+fluoroalcohol",
+      "why": "The \"forever chemicals\", used for long-wear and waterproof finishes. They genuinely do not break down and they genuinely do build up in people, which is why they are being phased out.",
+      "howMuch": "Harm at the amounts in a mascara has not been shown; the concern is lifetime accumulation from every source together. Drinking water and food packaging are much larger contributors than cosmetics.",
+      "bannedIn": "Being phased out of cosmetics in the EU and several US states"
+    },
+    {
+      "id": "cos-parabens",
+      "name": "Parabens (propyl, butyl)",
+      "tags": [],
+      "pattern": "propylparaben|butylparaben|isobutylparaben",
+      "why": "Preservatives with weak oestrogen-like activity in laboratory tests, which is where the breast-cancer headlines came from. The link has been looked for in people and not found.",
+      "howMuch": "Their activity is roughly a thousandth to a millionth that of the body's own oestrogen, and regulators have kept them legal after repeated review. The shorter ones, methyl and ethyl, are not a concern at all and are not flagged here."
+    },
+    {
+      "id": "cos-retinoid",
+      "name": "Retinol and retinoids",
+      "tags": [],
+      "pattern": "\\bretinol\\b|retinyl\\s+palmitate|retinaldehyde|tretinoin|adapalene",
+      "why": "Genuinely effective for skin ageing and acne, and included here for one reason only: pregnancy. Retinoids taken by mouth are proven to cause birth defects.",
+      "howMuch": "Very little gets through the skin from a cream, and no birth defect has been tied to a topical product. Even so, the standard advice from doctors is to stop using them while pregnant or trying, because the downside is so severe. Expect it to make skin more sun-sensitive too."
+    }
+  ],
+  "petAvoid": [
+    {
+      "id": "pet-xylitol",
+      "name": "Xylitol",
+      "tags": [
+        "en:e967"
+      ],
+      "pattern": "xylitol|birch\\s+sugar",
+      "why": "Harmless to people and a good sweetener for teeth. In dogs it triggers a massive insulin release, and the resulting crash in blood sugar can kill within hours. Liver failure can follow.",
+      "howMuch": "Around 0.1 g per kilogram of dog is enough for dangerous low blood sugar, which for a small dog is a couple of pieces of chewing gum. Treat any amount as an emergency and phone a vet."
     }
   ]
 }
