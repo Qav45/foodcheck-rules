@@ -3,93 +3,186 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Install Food Check</title>
+<title>Food Check</title>
+<meta name="description" content="Scan a food barcode and get a straight answer about what is in it. Free Android app, no account, no tracking.">
+<meta name="theme-color" content="#1B7A3D">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%231B7A3D'/><path d='M26 52l16 16 32-34' stroke='white' stroke-width='11' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
 <style>
-  :root { color-scheme: dark; }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    padding: 28px 20px 48px;
-    background: #000;
-    color: #fff;
-    font-family: -apple-system, "Segoe UI", Roboto, system-ui, sans-serif;
-    font-size: 19px;
-    line-height: 1.55;
-    max-width: 620px;
-    margin-inline: auto;
+  /* Deliberately flat. No gradients, no shadows, no animation. The app looks like this too,
+     and the people using it are mostly older, on small screens, often in a shop. */
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --ink: #16181c;
+    --muted: #5c6169;
+    --line: #e3e5e9;
+    --accent: #14672f;
+    --accent-ink: #ffffff;
+    --card: #f7f8f9;
   }
-  h1 { font-size: 32px; margin: 0 0 6px; }
-  .sub { color: #9a9a9a; margin: 0 0 30px; }
-  .download,
-  .beta-download {
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0b0d10;
+      --ink: #f2f3f5;
+      --muted: #9aa1ab;
+      --line: #23272e;
+      --accent: #1B7A3D;
+      --accent-ink: #ffffff;
+      --card: #14171b;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0 auto;
+    /* margin-inline is not understood by the Android 7 browser this page has to work in,
+       and this page is the recovery route for a phone whose app will not open. */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 56px 22px 72px;
+    max-width: 34rem;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, "Segoe UI", Roboto, system-ui, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  header { margin-bottom: 44px; }
+
+  h1 {
+    font-size: 34px;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin: 0 0 10px;
+    font-weight: 650;
+  }
+
+  .lede { color: var(--muted); margin: 0; font-size: 19px; }
+
+  h2 {
+    font-size: 15px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 600;
+    margin: 52px 0 16px;
+  }
+
+  .download {
     display: block;
-    background: #1B7A3D;
-    color: #fff;
+    background: var(--accent);
+    color: var(--accent-ink);
     text-decoration: none;
     text-align: center;
-    font-size: 23px;
+    font-size: 20px;
     font-weight: 600;
-    padding: 22px 20px;
-    border-radius: 16px;
+    padding: 20px 24px;
+    border-radius: 14px;
+    /* 48px minimum touch target, same rule the app follows. */
+    min-height: 60px;
+  }
+
+  .size {
+    text-align: center;
+    color: var(--muted);
+    font-size: 15px;
+    margin: 14px 0 0;
+  }
+
+  ol { padding-left: 22px; margin: 0; }
+  li { margin-bottom: 16px; }
+  li:last-child { margin-bottom: 0; }
+
+  ul.plain { list-style: none; padding: 0; margin: 0; }
+  ul.plain li {
+    padding-left: 26px;
+    position: relative;
     margin-bottom: 12px;
   }
-  .beta-download {
-    background: #765000;
-    border: 1px solid #d8a53a;
+  ul.plain li::before {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 0.7em;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
   }
-  .size { text-align: center; color: #9a9a9a; font-size: 16px; margin: 0 0 34px; }
-  .beta-size { text-align: center; color: #d8bd85; font-size: 16px; margin: 0 0 34px; }
-  .beta-note { color: #cfcfcf; font-size: 17px; margin: 0 0 14px; }
-  h2 { font-size: 21px; margin: 34px 0 10px; }
-  ol { padding-left: 24px; margin: 0; }
-  li { margin-bottom: 14px; }
+
   .card {
-    border: 1px solid #2a2a2a;
-    border-radius: 16px;
-    padding: 18px 20px;
-    margin-top: 28px;
-    color: #cfcfcf;
-    font-size: 17px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 20px 22px;
+    background: var(--card);
+    color: var(--muted);
+    font-size: 16px;
+    margin-top: 18px;
   }
-  code {
-    background: #161616;
-    padding: 2px 6px;
-    border-radius: 5px;
+  .card strong { color: var(--ink); }
+
+  a { color: var(--accent); }
+  @media (prefers-color-scheme: dark) { a { color: #6fbf87; } }
+
+  footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
     font-size: 15px;
-    word-break: break-all;
   }
 </style>
 </head>
 <body>
 
-<h1>Food Check</h1>
-<p class="sub">Scan a food barcode, get a straight answer.</p>
+<header>
+  <h1>Food Check</h1>
+  <p class="lede">Scan a barcode. Get a straight answer about what is in it.</p>
+</header>
 
-<a class="download" href="https://github.com/Qav45/foodcheck-rules/releases/download/v2.0/FoodCheck-v2.0.apk">Download stable version for Android</a>
+<a class="download" href="https://github.com/Qav45/foodcheck-rules/releases/download/v2.0/FoodCheck-v2.0.apk">Download for Android</a>
 <p class="size">Version 2.0 &middot; 31 MB &middot; Android 7.0 or newer</p>
 
-<h2>Beta test build</h2>
-<p class="beta-note">This is the R8 smoke-test build, not the finished FC Open Beta 1. Use it to test barcode scanning, the photo fallback and <strong>Settings &gt; Check for updates now</strong>. It may have bugs. Stable v2.0 is still recommended for normal use.</p>
-<a class="beta-download" href="https://github.com/Qav45/foodcheck-rules/releases/download/fc-open-beta-1-r8-smoketest/FoodCheck-r8-smoketest.apk">Download the beta test for Android</a>
-<p class="beta-size">Beta test &middot; 12 MB &middot; Android 7.0 or newer</p>
+<h2>What it does</h2>
+<ul class="plain">
+  <li>Tells you whether something is worth eating every day, now and then, or rarely.</li>
+  <li>Explains why, in plain words, and says how much is actually too much.</li>
+  <li>Checks the barcode against food recalls.</li>
+  <li>Also reads skincare, makeup and pet food, not just groceries.</li>
+  <li>Keeps a daily total against limits worked out from your own height, weight and age.</li>
+  <li>Works without a signal for anything you have scanned before.</li>
+</ul>
 
 <h2>Installing it</h2>
 <ol>
-  <li>Tap the stable or beta download button. Your phone will ask if you&rsquo;re sure, choose <strong>Download anyway</strong>.</li>
-  <li>Open the downloaded file. Android will say it can&rsquo;t install apps from this source yet; tap <strong>Settings</strong> and turn the switch on, then press back.</li>
-  <li>Tap <strong>Install</strong>. Google Play Protect may warn you that it doesn&rsquo;t recognise the app, that just means it didn&rsquo;t come from the Play Store. Choose <strong>Install anyway</strong>.</li>
+  <li>Tap the download button. Your phone will ask if you are sure, choose <strong>Download anyway</strong>.</li>
+  <li>Open the downloaded file. Android will say it cannot install apps from this source yet. Tap <strong>Settings</strong>, turn the switch on, then press back.</li>
+  <li>Tap <strong>Install</strong>. Play Protect may say it does not recognise the app, which only means it did not come from the Play Store. Choose <strong>Install anyway</strong>.</li>
 </ol>
 
 <div class="card">
-  <strong>Updating later:</strong> come back to this page and install the newest version straight over the old one.
-  Your daily log and settings are kept.
+  <strong>Updating later.</strong> The app checks for new versions by itself and offers them to you.
+  You can also come back here and install the newest version straight over the old one.
+  Your daily log and your settings are kept either way.
 </div>
 
+<h2>Your data</h2>
 <div class="card">
-  This app tells you what&rsquo;s in packaged food and how it compares to normal daily limits.
-  It isn&rsquo;t medical advice, if you have a health condition, your doctor&rsquo;s guidance comes first.
-  Food data comes from <a href="https://world.openfoodfacts.org" style="color:#6fbf87">Open Food Facts</a> (ODbL).
+  There is no account and no sign up, and nothing you scan is sent anywhere we control.
+  Your log, your profile and your limits stay on your phone and are never uploaded.
+  Scanning looks a barcode up at <a href="https://world.openfoodfacts.org">Open Food Facts</a>
+  and the U.S. FDA, so those services see the barcode, and product photos load from
+  Open Food Facts as you view them.
 </div>
+
+<footer>
+  Food Check tells you what is in packaged food and how it compares to ordinary daily limits.
+  It is not medical advice. If you have a health condition, your doctor comes first.
+  Food data from <a href="https://world.openfoodfacts.org">Open Food Facts</a>, used under the ODbL.
+</footer>
 
 </body>
 </html>
