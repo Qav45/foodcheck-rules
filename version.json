@@ -1,7 +1,7 @@
 {
-  "versionCode": 9,
-  "versionName": "1.8",
-  "url": "https://github.com/Qav45/foodcheck-rules/releases/download/v1.8/FoodCheck-v1.8.apk",
-  "sizeBytes": 30991404,
-  "notes": "Adds a Check for updates button, shows the version, and looks for updates more often."
+  "versionCode": 10,
+  "versionName": "1.9",
+  "url": "https://github.com/Qav45/foodcheck-rules/releases/download/v1.9/FoodCheck-v1.9.apk",
+  "sizeBytes": 31007788,
+  "notes": "Light and dark themes, a refreshed look, and picture scanning that actually finds the product."
 }
