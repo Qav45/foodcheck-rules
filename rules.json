@@ -1,0 +1,110 @@
+{
+  "version": 4,
+  "updated": "2026-07-30",
+  "note": "Ingredient rules for the Food Check Android app. AVOID requires demonstrated human harm at realistic eating amounts, NOT merely 'banned somewhere'. Every entry must state its harm dose in howMuch.",
+  "avoid": [
+    {
+      "id": "pho",
+      "name": "Partially hydrogenated oils (artificial trans fat)",
+      "tags": [],
+      "pattern": "partially\\s+hydrogenated",
+      "why": "The one additive proven to harm people at everyday amounts — it raises bad cholesterol, lowers good cholesterol, and increases heart-attack risk.",
+      "howMuch": "About 4-5 g a day — two teaspoons — raises heart-disease risk by roughly a quarter. There's no amount that helps you, so zero is the target.",
+      "bannedIn": "USA, EU, and most of the world"
+    },
+    {
+      "id": "e924",
+      "name": "Potassium bromate",
+      "tags": ["en:e924"],
+      "pattern": "potassium\\s+bromate",
+      "why": "A bread-flour additive that causes cancer in animals by damaging DNA. Health experts refused to set any safe level for it.",
+      "howMuch": "No safe level exists. Properly baked bread burns off most of it, but under-baked bread can keep some — and there's no reason to accept any.",
+      "bannedIn": "EU, UK, Canada, China, India; California from 2027"
+    },
+    {
+      "id": "e443",
+      "name": "Brominated vegetable oil (BVO)",
+      "tags": ["en:e443"],
+      "pattern": "brominated\\s+vegetable\\s+oil|\\bBVO\\b",
+      "why": "Builds up in your fat and can harm the thyroid and nerves. It has been illegal in US food since August 2025 — if you find it, the product is out of date.",
+      "howMuch": "People who drank 2-4 litres of BVO citrus soda a day for weeks developed headaches, memory loss and trouble walking. It's now illegal at any level.",
+      "bannedIn": "USA (2025), EU, Japan, India, Canada"
+    }
+  ],
+  "warning": [
+    {
+      "id": "nitrites",
+      "name": "Nitrites / nitrates (curing salts)",
+      "tags": ["en:e249", "en:e250", "en:e251", "en:e252"],
+      "pattern": "(sodium|potassium)\\s+(nitrite|nitrate)",
+      "why": "In cured meat these turn into compounds tied to bowel cancer. Processed meat is the one food the World Health Organization calls a definite cause of cancer in people.",
+      "howMuch": "Every 50 g of processed meat a day — two slices of bacon or one hot dog — raises bowel-cancer risk by about 18%. Occasional is fine; daily is the problem."
+    },
+    {
+      "id": "e127",
+      "name": "Red dye No. 3 (erythrosine)",
+      "tags": ["en:e127"],
+      "pattern": "erythrosine|\\bred\\s*(no\\.?\\s*|#\\s*)?3\\b",
+      "why": "Being removed from US food by January 2027. It caused thyroid tumours in male rats through a hormone route that doesn't work the same way in people — the FDA itself says there's no evidence it causes cancer in humans.",
+      "howMuch": "The rat tumours needed the dye to be about 4% of everything the animal ate, for life — roughly 100,000 times more than anyone gets from food."
+    },
+    {
+      "id": "e171",
+      "name": "Titanium dioxide",
+      "tags": ["en:e171"],
+      "pattern": "titanium\\s+dioxide",
+      "why": "A white colouring. Europe removed it in 2022 because it couldn't rule out DNA damage — but the USA, Canada, the UK, Australia and the World Health Organization all reviewed it and found no health concern.",
+      "howMuch": "No harmful amount has ever been found. Less than one part in a thousand is absorbed by the body; it mostly passes straight through.",
+      "bannedIn": "EU (2022) — still allowed in the USA"
+    },
+    {
+      "id": "e216",
+      "name": "Propylparaben",
+      "tags": ["en:e216", "en:e217"],
+      "pattern": "propyl\\s*paraben|propyl\\s+p-?hydroxybenzoate",
+      "why": "A preservative Europe removed from food over possible hormone effects in young rats. A later, larger study found nothing, and most of what people absorb comes from cosmetics rather than food.",
+      "howMuch": "The rat effect needed about 700 mg a day scaled to an adult. Food gives you well under 1 mg a day — about a thousand times less.",
+      "bannedIn": "EU food; California from 2027"
+    },
+    {
+      "id": "e320",
+      "name": "BHA / BHT",
+      "tags": ["en:e320", "en:e321"],
+      "pattern": "\\bBHA\\b|\\bBHT\\b|butylated\\s+hydroxy",
+      "why": "Preservatives that stop fats going rancid. BHA caused tumours in the forestomach of rats — an organ people don't have. The FDA reopened the safety review of both in 2026.",
+      "howMuch": "The rat tumours needed BHA to be 2% of everything the animal ate — about a thousand times what people get. The one real gap: children who eat a lot of packaged food can go over the BHT limit."
+    },
+    {
+      "id": "dyes",
+      "name": "Artificial food dyes (Red 40, Yellow 5, Yellow 6)",
+      "tags": ["en:e129", "en:e102", "en:e110", "en:e122", "en:e124"],
+      "pattern": "allura\\s+red|tartrazine|sunset\\s+yellow|\\bred\\s*(no\\.?\\s*|#\\s*)?40\\b|\\byellow\\s*(no\\.?\\s*|#\\s*)?[56]\\b",
+      "why": "Can worsen attention and hyperactivity in some children. In Europe these foods must carry a warning label. US makers have promised to remove them, but there's no law forcing it.",
+      "howMuch": "Behaviour changes showed up in children at 20-60 mg a day — one brightly coloured drink or a handful of sweets. No effect has been found in adults."
+    },
+    {
+      "id": "e968",
+      "name": "Erythritol",
+      "tags": ["en:e968"],
+      "pattern": "erythritol",
+      "why": "A sugar substitute in \"keto\" and sugar-free foods. Recent research found it makes blood platelets stickier, which could raise clot, stroke and heart-attack risk. Not proven yet, but worth knowing if your heart is a concern.",
+      "howMuch": "One serving — about 30 g, the amount in a single sugar-free drink or dessert — was enough to change platelet behaviour for hours in healthy volunteers."
+    },
+    {
+      "id": "e951",
+      "name": "Aspartame",
+      "tags": ["en:e951"],
+      "pattern": "aspartame",
+      "why": "The diet-drink sweetener. The World Health Organization's cancer agency calls it \"possibly\" cancer-causing, but the same organisation's safety panel kept the daily limit unchanged and found no reason to worry.",
+      "howMuch": "You'd have to drink about 14 cans of diet soda every day to reach the safe limit. The one real rule: anyone born with the condition PKU must avoid it completely."
+    },
+    {
+      "id": "e952",
+      "name": "Cyclamate",
+      "tags": ["en:e952"],
+      "pattern": "cyclamate|cyclamic\\s+acid",
+      "why": "A sweetener banned in the USA in 1970 over a cancer scare that later fell apart — the FDA's own scientists cleared it in 1984. It stays on this list only because its safe daily limit is lower than other sweeteners.",
+      "howMuch": "About 5 cans a day of a cyclamate-sweetened drink reaches the safe limit — the tightest margin of any sweetener, so don't drink it all day."
+    }
+  ]
+}
