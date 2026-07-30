@@ -1,7 +1,7 @@
 {
-  "versionCode": 11,
-  "versionName": "2.0",
-  "url": "https://github.com/Qav45/foodcheck-rules/releases/download/v2.0/FoodCheck-v2.0.apk",
-  "sizeBytes": 31116629,
-  "notes": "Scans skincare, makeup and pet food as well as food, rates alcohol, explains why every rating is what it is, and works out your daily targets from your own weight and height."
+  "versionCode": 12,
+  "versionName": "3.0",
+  "url": "https://github.com/Qav45/foodcheck-rules/releases/download/v3.0/FoodCheck-v3.0.apk",
+  "sizeBytes": 11721318,
+  "notes": "The app is now called FC Open Beta 1, is less than half the size it was, and speaks Spanish, Farsi, Arabic and Canadian English."
 }
