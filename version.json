@@ -1,7 +1,7 @@
 {
-  "versionCode": 10,
-  "versionName": "1.9",
-  "url": "https://github.com/Qav45/foodcheck-rules/releases/download/v1.9/FoodCheck-v1.9.apk",
-  "sizeBytes": 31007788,
-  "notes": "Light and dark themes, a refreshed look, and picture scanning that actually finds the product."
+  "versionCode": 11,
+  "versionName": "2.0",
+  "url": "https://github.com/Qav45/foodcheck-rules/releases/download/v2.0/FoodCheck-v2.0.apk",
+  "sizeBytes": 31116629,
+  "notes": "Scans skincare, makeup and pet food as well as food, rates alcohol, explains why every rating is what it is, and works out your daily targets from your own weight and height."
 }
