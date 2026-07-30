@@ -1,7 +1,7 @@
 {
-  "versionCode": 8,
-  "versionName": "1.7",
-  "url": "https://github.com/Qav45/foodcheck-rules/releases/download/v1.7/FoodCheck-v1.7.apk",
+  "versionCode": 9,
+  "versionName": "1.8",
+  "url": "https://github.com/Qav45/foodcheck-rules/releases/download/v1.8/FoodCheck-v1.8.apk",
   "sizeBytes": 30991404,
-  "notes": "Faster scanning, reads more barcode types, finds food from the package photo, and tracks ten nutrients a day."
+  "notes": "Adds a Check for updates button, shows the version, and looks for updates more often."
 }
