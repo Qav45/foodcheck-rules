@@ -1,16 +1,16 @@
 # foodcheck-rules
 
 Ingredient rules for the **Food Check** Android app. The app fetches `rules.json` once a day
-and falls back to the copy compiled into the APK if this file is unreachable or malformed —
+and falls back to the copy compiled into the APK if this file is unreachable or malformed,
 so editing this file updates the app with no reinstall.
 
 ## The bar for each list
 
-**`avoid`** — demonstrated harm to a real person at amounts a real person actually eats.
+**`avoid`**, demonstrated harm to a real person at amounts a real person actually eats.
 "Banned somewhere" is *not* enough on its own; several bans are precautionary or procedural
 leftovers. Substances whose only harm evidence is extreme animal dosing belong in `warning`.
 
-**`warning`** — worth knowing about, but not proven to hurt people at normal amounts. These
+**`warning`**, worth knowing about, but not proven to hurt people at normal amounts. These
 keep a food out of "Eat Every Day" and nothing more.
 
 Every entry must answer **"how much before it actually hurts me?"** in `howMuch`, in plain words.
