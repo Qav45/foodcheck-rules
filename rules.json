@@ -1,11 +1,12 @@
 {
-  "version": 6,
+  "version": 7,
   "updated": "2026-07-30",
   "note": "Ingredient rules for the Food Check Android app. AVOID requires demonstrated human harm at realistic amounts, NOT merely 'banned somewhere'. Every entry must state its harm dose in howMuch. The cosmetic and pet arrays are separate top-level keys on purpose: older app versions read 'avoid' wholesale and match it against food ingredient text, so a beauty entry placed there would flag real groceries.",
   "avoid": [
     {
       "id": "pho",
       "name": "Partially hydrogenated oils (artificial trans fat)",
+      "short": "Raises bad cholesterol and heart attack risk at amounts people really eat.",
       "tags": [],
       "pattern": "partially\\s+hydrogenated",
       "why": "The one additive proven to harm people at everyday amounts, it raises bad cholesterol, lowers good cholesterol, and increases heart-attack risk.",
@@ -15,6 +16,7 @@
     {
       "id": "e924",
       "name": "Potassium bromate",
+      "short": "Causes cancer in animals by damaging DNA. No safe level was ever set.",
       "tags": [
         "en:e924"
       ],
@@ -26,6 +28,7 @@
     {
       "id": "e443",
       "name": "Brominated vegetable oil (BVO)",
+      "short": "Builds up in body fat and can harm the thyroid and nerves. Illegal in US food.",
       "tags": [
         "en:e443"
       ],
@@ -39,6 +42,7 @@
     {
       "id": "nitrites",
       "name": "Nitrites / nitrates (curing salts)",
+      "short": "In cured meat these form compounds tied to bowel cancer.",
       "tags": [
         "en:e249",
         "en:e250",
@@ -52,6 +56,7 @@
     {
       "id": "e127",
       "name": "Red dye No. 3 (erythrosine)",
+      "short": "Being removed from US food by 2027. The rat tumour route does not fit people.",
       "tags": [
         "en:e127"
       ],
@@ -62,6 +67,7 @@
     {
       "id": "e171",
       "name": "Titanium dioxide",
+      "short": "Europe removed it over possible DNA damage. Other regulators disagreed.",
       "tags": [
         "en:e171"
       ],
@@ -73,6 +79,7 @@
     {
       "id": "e216",
       "name": "Propylparaben",
+      "short": "Europe removed it over possible hormone effects. A larger study found none.",
       "tags": [
         "en:e216",
         "en:e217"
@@ -85,6 +92,7 @@
     {
       "id": "e320",
       "name": "BHA / BHT",
+      "short": "Stops fats going rancid. BHA caused tumours in an organ people do not have.",
       "tags": [
         "en:e320",
         "en:e321"
@@ -96,6 +104,7 @@
     {
       "id": "dyes",
       "name": "Artificial food dyes (Red 40, Yellow 5, Yellow 6)",
+      "short": "Can worsen attention in some children. Europe makes these carry a warning.",
       "tags": [
         "en:e129",
         "en:e102",
@@ -110,6 +119,7 @@
     {
       "id": "e968",
       "name": "Erythritol",
+      "short": "New research found it makes platelets stickier, which may raise clot risk.",
       "tags": [
         "en:e968"
       ],
@@ -120,6 +130,7 @@
     {
       "id": "e951",
       "name": "Aspartame",
+      "short": "Called possibly cancer causing, but the safety limit was left unchanged.",
       "tags": [
         "en:e951"
       ],
@@ -130,6 +141,7 @@
     {
       "id": "e952",
       "name": "Cyclamate",
+      "short": "Banned in the USA in 1970 over a scare that later fell apart.",
       "tags": [
         "en:e952"
       ],
@@ -142,6 +154,7 @@
     {
       "id": "cos-mercury",
       "name": "Mercury (calomel, mercurous chloride, thimerosal)",
+      "short": "Illegal in creams but still found. Real poisoning: kidneys, tremors, memory.",
       "tags": [],
       "pattern": "\\bmercur(y|ous|ic)\\b|\\bcalomel\\b|thimerosal|thiomersal|mercurio",
       "why": "Used illegally in some skin-lightening creams. It really does poison people: kidney damage, tremors, memory loss and rashes, and it passes to a baby through the skin and through breast milk.",
@@ -151,6 +164,7 @@
     {
       "id": "cos-hydroquinone",
       "name": "Hydroquinone",
+      "short": "Can permanently darken the very skin it was meant to lighten.",
       "tags": [],
       "pattern": "hydroquinone",
       "why": "A skin lightener that can cause ochronosis, a permanent blue-black darkening of exactly the skin you were trying to lighten. The FDA withdrew it from over-the-counter sale in 2020.",
@@ -160,6 +174,7 @@
     {
       "id": "cos-lead-acetate",
       "name": "Lead acetate",
+      "short": "Lead in a hair dye. It comes off on hands and combs and reaches children.",
       "tags": [],
       "pattern": "lead\\s+acetate|plumbum\\s+aceticum",
       "why": "Was used in progressive hair dyes for men. Lead comes off on hands, combs and pillowcases, which is how it reaches a child in the same house.",
@@ -169,6 +184,7 @@
     {
       "id": "cos-formaldehyde",
       "name": "Formaldehyde / formalin",
+      "short": "A known human carcinogen breathed in. Salon treatments have caused real harm.",
       "tags": [],
       "pattern": "\\bformaldehyde\\b|\\bformalin\\b|methylene\\s+glycol|methanediol",
       "why": "A known human carcinogen when breathed in. Salon hair-smoothing treatments have caused documented breathing problems, burning eyes and nosebleeds in both stylists and clients.",
@@ -180,6 +196,7 @@
     {
       "id": "cos-isothiazolinone",
       "name": "Methylisothiazolinone (MI / MCI)",
+      "short": "Caused a European allergy epidemic. Once you react to it, that is for life.",
       "tags": [],
       "pattern": "methylisothiazolinone|methylchloroisothiazolinone|\\bMCI\\b|benzisothiazolinone",
       "why": "A preservative that caused a genuine epidemic of contact allergy across Europe between 2010 and 2015, at one point affecting around one person in ten who was patch-tested. Once you are sensitised it is for life.",
@@ -189,6 +206,7 @@
     {
       "id": "cos-formaldehyde-releasers",
       "name": "Formaldehyde releasers (DMDM hydantoin, quaternium-15 and similar)",
+      "short": "Slowly give off formaldehyde. A common cause of cosmetic rashes.",
       "tags": [],
       "pattern": "dmdm\\s+hydantoin|imidazolidinyl\\s+urea|diazolidinyl\\s+urea|quaternium-15|bronopol|bromopol|sodium\\s+hydroxymethylglycinate|2-bromo-2-nitropropane",
       "why": "Preservatives that work by slowly giving off tiny amounts of formaldehyde. The realistic problem is contact allergy: these are among the more common causes of cosmetic rashes.",
@@ -197,6 +215,7 @@
     {
       "id": "cos-oxybenzone",
       "name": "Oxybenzone (benzophenone-3)",
+      "short": "Absorbed well above the level at which the FDA asks for more testing.",
       "tags": [],
       "pattern": "oxybenzone|benzophenone-3",
       "why": "A chemical sunscreen filter absorbed through the skin far above the level at which the FDA asks for more safety testing. That is a call for data, not a finding of harm, and no harm has been shown in people.",
@@ -205,6 +224,7 @@
     {
       "id": "cos-ppd",
       "name": "p-Phenylenediamine and coal-tar hair dyes",
+      "short": "A strong allergen in dark hair dye. Reactions can need hospital treatment.",
       "tags": [],
       "pattern": "p-?phenylenediamine|\\bPPD\\b|toluene-2,5-diamine|coal\\s+tar",
       "why": "The main dark hair-dye ingredient and a strong allergen. Reactions range from an itchy scalp to severe facial swelling needing hospital treatment.",
@@ -213,6 +233,7 @@
     {
       "id": "cos-phthalates",
       "name": "Phthalates (DEP, DBP, DEHP)",
+      "short": "Make fragrance last. Hormone effects in animals, and a worry in pregnancy.",
       "tags": [],
       "pattern": "\\bphthalate|diethyl\\s+phthalate|dibutyl\\s+phthalate|\\bDEHP\\b|\\bDBP\\b",
       "why": "Used to make fragrance last and nail polish flexible. Some of them affect hormones in animal studies at high doses, and there is ongoing concern about exposure during pregnancy.",
@@ -222,6 +243,7 @@
     {
       "id": "cos-pfas",
       "name": "PFAS (fluorinated ingredients)",
+      "short": "The forever chemicals. They do not break down and they build up in people.",
       "tags": [],
       "pattern": "perfluor|polyfluor|\\bPTFE\\b|polytetrafluoroethylene|fluoro-?octyl|\\bC9-15\\s+fluoroalcohol",
       "why": "The \"forever chemicals\", used for long-wear and waterproof finishes. They genuinely do not break down and they genuinely do build up in people, which is why they are being phased out.",
@@ -231,6 +253,7 @@
     {
       "id": "cos-parabens",
       "name": "Parabens (propyl, butyl)",
+      "short": "Weak oestrogen-like activity in the laboratory, not found in people.",
       "tags": [],
       "pattern": "propylparaben|butylparaben|isobutylparaben",
       "why": "Preservatives with weak oestrogen-like activity in laboratory tests, which is where the breast-cancer headlines came from. The link has been looked for in people and not found.",
@@ -239,6 +262,7 @@
     {
       "id": "cos-retinoid",
       "name": "Retinol and retinoids",
+      "short": "Effective, and here for one reason: retinoids by mouth cause birth defects.",
       "tags": [],
       "pattern": "\\bretinol\\b|retinyl\\s+palmitate|retinaldehyde|tretinoin|adapalene",
       "why": "Genuinely effective for skin ageing and acne, and included here for one reason only: pregnancy. Retinoids taken by mouth are proven to cause birth defects.",
@@ -249,6 +273,7 @@
     {
       "id": "pet-xylitol",
       "name": "Xylitol",
+      "short": "Fine for people. In dogs it crashes blood sugar and can kill within hours.",
       "tags": [
         "en:e967"
       ],

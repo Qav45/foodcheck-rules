@@ -21,6 +21,7 @@ Every entry must answer **"how much before it actually hurts me?"** in `howMuch`
 |---|---|---|
 | `id` | yes | Stable identifier |
 | `name` | yes | Shown as the card heading |
+| `short` | no | One line, 90 characters or fewer. What the Warning List shows before you tap. Falls back to `why` when absent, so a file without it renders exactly as it always did |
 | `tags` | yes (may be empty) | Open Food Facts additive tags, e.g. `en:e924` |
 | `pattern` | yes | Case-insensitive regex matched against the ingredients text |
 | `why` | yes | One or two plain sentences |
