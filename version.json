@@ -1,7 +1,7 @@
 {
-  "versionCode": 12,
-  "versionName": "3.0",
-  "url": "https://github.com/Qav45/foodcheck-rules/releases/download/v3.0/FoodCheck-v3.0.apk",
-  "sizeBytes": 11721318,
-  "notes": "The app is now called FC Open Beta 1, is less than half the size it was, and speaks Spanish, Farsi, Arabic and Canadian English."
+  "versionCode": 13,
+  "versionName": "3.1",
+  "url": "https://github.com/Qav45/foodcheck-rules/releases/download/v3.1/FoodCheck-v3.1.apk",
+  "sizeBytes": 11762106,
+  "notes": "Shopping lists you can share, healthier suggestions when something scores badly, and plain answers for things that are not food."
 }
