@@ -123,6 +123,11 @@
     margin-top: 18px;
   }
   .card strong { color: var(--ink); }
+  /* The beta note sits directly under the download button, so it reads as a condition of
+     the thing you are about to install rather than as another section further down. */
+  .beta { margin-top: 18px; }
+  .beta p { margin: 0 0 10px; }
+  .beta p:last-child { margin-bottom: 0; }
 
   a { color: var(--accent); }
   @media (prefers-color-scheme: dark) { a { color: #6fbf87; } }
@@ -145,6 +150,19 @@
 
 <a class="download" href="https://github.com/Qav45/foodcheck-rules/releases/download/v3.0/FoodCheck-v3.0.apk">Download for Android</a>
 <p class="size">Version 3.0 &middot; 12 MB &middot; Android 7.0 or newer</p>
+
+<div class="card beta">
+  <!-- Deliberately does not name the release. release_foodcheck.py rewrites the download
+       link and the version line above and nothing else, so a name written here would be
+       one release out of date the day after the next publish. The version number is
+       already on the line above, and the app shows its own name in Settings. -->
+  <p><strong>This is a beta.</strong></p>
+  <p>That means it works and is used every day, but it is still being changed, and you may
+  find something wrong with it. It updates itself, so a fix reaches you without you doing
+  anything.</p>
+  <p>It is not medical advice, and it will not always have your product: no free food
+  database has everything, particularly own-brand and very new items.</p>
+</div>
 
 <h2>What it does</h2>
 <ul class="plain">
