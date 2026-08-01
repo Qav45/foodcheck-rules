@@ -1,7 +1,7 @@
 {
-  "versionCode": 14,
-  "versionName": "3.2",
-  "url": "https://github.com/Qav45/foodcheck-rules/releases/download/v3.2/FoodCheck-v3.2.apk",
-  "sizeBytes": 11778678,
-  "notes": "A new look, a much shorter setup, and fewer taps everywhere."
+  "versionCode": 15,
+  "versionName": "3.3",
+  "url": "https://github.com/Qav45/foodcheck-rules/releases/download/v3.3/FoodCheck-v3.3.apk",
+  "sizeBytes": 11778674,
+  "notes": "Fixes an update screen that could not be closed, and changes the colours to navy and blue."
 }
