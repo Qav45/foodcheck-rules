@@ -1,7 +1,7 @@
 {
-  "versionCode": 21,
-  "versionName": "4.0",
-  "url": "https://github.com/Qav45/foodcheck-rules/releases/download/v4.0/FoodCheck-v4.0.apk",
-  "sizeBytes": 11794126,
-  "notes": "A rebuilt look: every screen opens with a title bar, a scan result is a card instead of a block of colour, and your day leads with how much of it you have used."
+  "versionCode": 22,
+  "versionName": "5.0",
+  "url": "https://github.com/Qav45/foodcheck-rules/releases/download/v5.0/FoodCheck-v5.0.apk",
+  "sizeBytes": 11844054,
+  "notes": "The app opens on your day, and the scanner is now the round button in the middle of the bar."
 }
