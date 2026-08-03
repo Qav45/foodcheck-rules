@@ -1,7 +1,7 @@
 {
-  "versionCode": 20,
-  "versionName": "3.8",
-  "url": "https://github.com/Qav45/foodcheck-rules/releases/download/v3.8/FoodCheck-v3.8.apk",
-  "sizeBytes": 11794078,
-  "notes": "The app is dark now for everybody, the tabs have their names back, and your day is a list of limits with a word each."
+  "versionCode": 21,
+  "versionName": "4.0",
+  "url": "https://github.com/Qav45/foodcheck-rules/releases/download/v4.0/FoodCheck-v4.0.apk",
+  "sizeBytes": 11794126,
+  "notes": "A rebuilt look: every screen opens with a title bar, a scan result is a card instead of a block of colour, and your day leads with how much of it you have used."
 }
