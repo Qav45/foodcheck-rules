@@ -1,7 +1,7 @@
 {
-  "versionCode": 17,
-  "versionName": "3.5",
-  "url": "https://github.com/Qav45/foodcheck-rules/releases/download/v3.5/FoodCheck-v3.5.apk",
-  "sizeBytes": 11777918,
-  "notes": "A new look throughout, and every button now says what it actually does."
+  "versionCode": 18,
+  "versionName": "3.6",
+  "url": "https://github.com/Qav45/foodcheck-rules/releases/download/v3.6/FoodCheck-v3.6.apk",
+  "sizeBytes": 11794798,
+  "notes": "Bars are made of blocks now, the score is a dial, and your day opens with four totals and the last seven days."
 }
