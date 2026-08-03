@@ -1,7 +1,7 @@
 {
-  "versionCode": 19,
-  "versionName": "3.7",
-  "url": "https://github.com/Qav45/foodcheck-rules/releases/download/v3.7/FoodCheck-v3.7.apk",
-  "sizeBytes": 11794698,
-  "notes": "The app opens dark now, your day leads with one big percentage, and every total has its own week drawn under it."
+  "versionCode": 20,
+  "versionName": "3.8",
+  "url": "https://github.com/Qav45/foodcheck-rules/releases/download/v3.8/FoodCheck-v3.8.apk",
+  "sizeBytes": 11794078,
+  "notes": "The app is dark now for everybody, the tabs have their names back, and your day is a list of limits with a word each."
 }
