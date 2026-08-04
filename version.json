@@ -1,7 +1,7 @@
 {
-  "versionCode": 23,
-  "versionName": "6.0",
-  "url": "https://github.com/Qav45/foodcheck-rules/releases/download/v6.0/FoodCheck-v6.0.apk",
-  "sizeBytes": 46675196,
-  "notes": "260,000 products now ship inside the app, so most scans work with no signal."
+  "versionCode": 24,
+  "versionName": "6.1",
+  "url": "https://github.com/Qav45/foodcheck-rules/releases/download/v6.1/FoodCheck-v6.1.apk",
+  "sizeBytes": 46770736,
+  "notes": "The app can now be updated and supported remotely, and developer mode can be switched off again."
 }
