@@ -1,7 +1,7 @@
 {
-  "versionCode": 22,
-  "versionName": "5.0",
-  "url": "https://github.com/Qav45/foodcheck-rules/releases/download/v5.0/FoodCheck-v5.0.apk",
-  "sizeBytes": 11844054,
-  "notes": "The app opens on your day, and the scanner is now the round button in the middle of the bar."
+  "versionCode": 23,
+  "versionName": "6.0",
+  "url": "https://github.com/Qav45/foodcheck-rules/releases/download/v6.0/FoodCheck-v6.0.apk",
+  "sizeBytes": 46675196,
+  "notes": "260,000 products now ship inside the app, so most scans work with no signal."
 }
